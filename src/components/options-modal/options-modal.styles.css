@@ -1,0 +1,213 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;700&display=swap");
+/* 
+0 - 600px : Phone (ref : 375px)
+600 - 900px: Tablet portrait (ref : 768px)
+900 - 1200px : Tablet landscape
+[1200 - 1800] is where our normal syles apply
+1800px + : Big desktop
+*/
+/* $breakpoint arguement choices:
+- phone
+- tab-port
+- tab-land 
+- big-desktop
+
+ORDER: Base + typography > general layout + grid > pge layout > components
+
+1em = 16px
+only screen is to avoid media queries are applied in case of printing for example
+*/
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;700&display=swap");
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 62.5%;
+  /* root font-size to rem - correspond to 10px but not in px to authorize user to change default font size of his browser - 1rem = 10px; 10px/16px = 62.5% - 16px default size browser font*/
+}
+
+@media only screen and (max-width: 75em) {
+  html {
+    font-size: 56.25%;
+  }
+}
+
+@media only screen and (max-width: 56.25em) {
+  html {
+    font-size: 50%;
+  }
+}
+
+@media only screen and (min-width: 112.5em) {
+  html {
+    font-size: 75%;
+  }
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  line-height: 26px;
+  font-size: 16px;
+  background-color: #ffffff;
+  color: #333;
+}
+
+.options-modal {
+  position: fixed;
+  background-color: #fafafa;
+  height: calc(100% - 6rem);
+  z-index: 20;
+  left: 0;
+  width: 100%;
+  padding: 2.5rem 1.5rem;
+  border-top-left-radius: 2rem;
+  border-top-right-radius: 2rem;
+  overflow-x: auto;
+  top: 4rem;
+  translation-duration: 224ms;
+}
+
+.options-modal__header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.options-modal__header span {
+  font-size: 1.5rem;
+  font-family: "Playfair Display", serif;
+  font-weight: 400;
+}
+
+.options-modal__header__icon {
+  cursor: pointer;
+}
+
+.options-modal__content {
+  margin-top: 2rem;
+}
+
+.options-modal__content__cart-item {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #ebebeb;
+  padding: 1rem 1.5rem;
+  margin: 0 -1.5rem;
+}
+
+.options-modal__content__cart-item__img {
+  width: 48px;
+}
+
+.options-modal__content__cart-item__details {
+  padding-left: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 1rem;
+}
+
+.options-modal__content__form {
+  margin-top: 1.5rem;
+}
+
+.options-modal__content__form__size__item {
+  margin-left: 0.5rem;
+  background-color: #ffffff;
+  color: #aaaaaa;
+  border: 0.0625rem solid #aaaaaa;
+  height: 3rem;
+  min-width: 3rem;
+  outline: 0;
+  -webkit-transition: background-color 0.2s;
+  transition: background-color 0.2s;
+  border-radius: 0.25rem;
+}
+
+.options-modal__content__form__size__item:hover {
+  background-color: transparent;
+  color: #44cbc8;
+  border-color: #44cbc8;
+}
+
+.options-modal__content__form__size__item.selected {
+  background-color: #333;
+  color: #ffffff;
+  border: #333;
+}
+
+.options-modal__footer {
+  margin-top: 4rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.options-modal__footer__btn {
+  width: calc(50% - 0.5rem);
+  background-color: transparent;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  line-height: 1;
+  text-align: center;
+  white-space: nowrap;
+  min-width: 7.5rem;
+  height: 4rem;
+  padding: 0.1rem;
+  font-size: 1rem;
+  font-weight: 400;
+  border: 0.0625rem solid #333;
+  color: #333;
+  outline: none;
+  border-radius: 0.25rem;
+  letter-spacing: 0.06rem;
+}
+
+.options-modal__footer__btn.btn__submit {
+  background-color: #4d4d4d;
+  border-color: #4d4d4d;
+  color: #ffffff;
+}
+/*# sourceMappingURL=options-modal.styles.css.map */

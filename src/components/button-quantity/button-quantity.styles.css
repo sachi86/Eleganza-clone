@@ -1,0 +1,147 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;700&display=swap");
+/* 
+0 - 600px : Phone (ref : 375px)
+600 - 900px: Tablet portrait (ref : 768px)
+900 - 1200px : Tablet landscape
+[1200 - 1800] is where our normal syles apply
+1800px + : Big desktop
+*/
+/* $breakpoint arguement choices:
+- phone
+- tab-port
+- tab-land 
+- big-desktop
+
+ORDER: Base + typography > general layout + grid > pge layout > components
+
+1em = 16px
+only screen is to avoid media queries are applied in case of printing for example
+*/
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;700&display=swap");
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 62.5%;
+  /* root font-size to rem - correspond to 10px but not in px to authorize user to change default font size of his browser - 1rem = 10px; 10px/16px = 62.5% - 16px default size browser font*/
+}
+
+@media only screen and (max-width: 75em) {
+  html {
+    font-size: 56.25%;
+  }
+}
+
+@media only screen and (max-width: 56.25em) {
+  html {
+    font-size: 50%;
+  }
+}
+
+@media only screen and (min-width: 112.5em) {
+  html {
+    font-size: 75%;
+  }
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  line-height: 26px;
+  font-size: 16px;
+  background-color: #ffffff;
+  color: #333;
+}
+
+.btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.btn__qty {
+  cursor: pointer;
+  background-color: #ffffff;
+  width: 3.5rem;
+  height: 3.5rem;
+  border: 0.0625rem solid #333;
+  border-radius: 0.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: .2s ease-in-out;
+  transition: .2s ease-in-out;
+  margin: 0.8rem;
+}
+
+@media only screen and (max-width: 56.25em) {
+  .btn__qty {
+    width: 100%;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+@media only screen and (max-width: 37.5em) {
+  .btn__qty {
+    width: 100%;
+  }
+}
+
+.btn__qty__minus:hover, .btn__qty__minus:active, .btn__qty__plus:hover, .btn__qty__plus:active {
+  background-color: #333;
+}
+
+.btn__qty__minus:hover > svg path, .btn__qty__minus:active > svg path, .btn__qty__plus:hover > svg path, .btn__qty__plus:active > svg path {
+  fill: #ffffff;
+}
+
+.btn__qty__delete {
+  border-color: #ff5252;
+}
+
+.btn__qty__delete > svg path {
+  fill: #ff5252;
+}
+
+.btn__qty__delete:hover, .btn__qty__delete:active {
+  background-color: #ff5252;
+}
+
+.btn__qty__delete:hover > svg path, .btn__qty__delete:active > svg path {
+  fill: #ffffff;
+}
+
+@media only screen and (max-width: 56.25em) {
+  .btn__qty__delete {
+    padding: 0 2rem;
+  }
+}
+
+.btn__qty__number {
+  border-color: #e0e0e0;
+  font-weight: 700;
+}
+/*# sourceMappingURL=button-quantity.styles.css.map */

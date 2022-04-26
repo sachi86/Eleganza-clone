@@ -1,0 +1,161 @@
+// @import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+
+#container-signIn {
+  width: 100vw;
+  height: 100vh;
+  opacity: 0.5;
+  z-index: 99;
+  position: absolute;
+  background: #333;
+}
+
+button {
+  color: #333;
+  cursor: pointer;
+}
+
+.signIn {
+  top: 0;
+  right: 0;
+  height: 100vh;
+  z-index: 1000;
+  position: absolute;
+  min-width: 450px;
+  background-color: #fff;
+
+  .btn-orderWithOutLogin {
+    margin-bottom: 20px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .signIn {
+    width: 100vw;
+  }
+}
+
+.signIn__form {
+  padding: 2rem;
+
+  input {
+    width: 100%;
+    border: 1px solid #e0e0e0;
+    height: 48px;
+    display: block;
+    outline: none;
+    font-size: 20px;
+    padding-left: 20px;
+    border-radius: 4px;
+    margin-bottom: 10px;
+  }
+  button {
+    height: 48px;
+    border-radius: 4px;
+  }
+}
+.signIn__form_error {
+  color: #fff;
+  height: 28px;
+  position: relative;
+  padding-left: 10px;
+  margin-bottom: 10px;
+  background-color: #ff5252;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+.signIn__form__btn {
+  height: 48px;
+  border-radius: 4px;
+  margin-top: 20px;
+  /**
+  * blue green buttons
+  * size big for "S'identifier"
+  * size small for "soumettre"
+  */
+  &__blue-green--big {
+    width: 100%;
+    border: none;
+    background-color: #44cbc8;
+  }
+  &__blue-green--big:hover {
+    background-color: #6cd6d4;
+  }
+  &__blue-green--small {
+    width: 33%;
+    border: none;
+    background-color: #44cbc8;
+  }
+  &__blue-green--small:hover {
+    background-color: #6cd6d4;
+  }
+  /**
+  * transparent buttons with border
+  * size big for "Créer un compte"
+  * size small for "Annuler"
+  */
+  &__transparent--big {
+    width: 100%;
+    border: 1px solid #e0e0e0;
+    background-color: transparent;
+  }
+  &__transparent--big:hover {
+    color: #fff;
+    border: none;
+    background-color: #333;
+  }
+  &__transparent--small {
+    width: 33%;
+    border: 1px solid #e0e0e0;
+    background-color: transparent;
+  }
+  &__transparent--small:hover {
+    color: #fff;
+    border: none;
+    background-color: #333;
+  }
+  /**
+  * transparent buttons border none
+  * size big for "mot de passe oublié" 
+  */
+  &__transparent--big-psw {
+    width: 100%;
+    border: none;
+    background-color: transparent;
+  }
+  &__transparent--big-psw:hover {
+    background-color: #f8f8f8;
+  }
+  /**
+  * black buttons
+  * size big for "Soumettre"
+  */
+  &__black--big {
+    color: #fff;
+    width: 100%;
+    border: none;
+    background-color: #333;
+  }
+  &__black--big:hover {
+    background-color: #4d4d4d;
+  }
+}
+.signIn__form--btn-mdp-separation {
+  border: 1px solid #e0e0e0;
+  margin-top: 20px;  
+  margin-bottom: 40px;
+}
+
+.signIn__form_error--triangle {
+  top: -10px;
+  width: 0;
+  height: 0;
+  display: inline-block;
+  position: absolute;
+  border-left: 10px solid #0000;
+  border-right: 10px solid #0000;
+  border-bottom: 10px solid #ff5252;
+}
+
+form#forgotPassword p {
+  margin-bottom: 40px;
+}

@@ -1,0 +1,119 @@
+@import "../../sass/main";
+
+.options-modal {
+  position: fixed;
+  background-color: #fafafa;
+  height: calc(100% - 6rem);
+  z-index: 20;
+  left: 0;
+  width: 100%;
+  padding: 2.5rem 1.5rem;
+  border-top-left-radius: 2rem;
+  border-top-right-radius: 2rem;
+  overflow-x: auto;
+  top: 4rem;
+  translation-duration: 224ms;
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+
+    & span {
+      font-size: 1.5rem;
+      font-family: $font-secondary;
+      font-weight: $font-weight-regular;
+    }
+
+    &__icon {
+      cursor: pointer;
+    }
+  }
+
+  &__content {
+    margin-top: 2rem;
+
+    &__cart-item {
+      align-items: center;
+      display: flex;
+      background-color: #ebebeb;
+      padding: 1rem 1.5rem;
+      margin: 0 -1.5rem;
+
+      &__img {
+        width: 48px;
+      }
+
+      &__details {
+        padding-left: 1rem;
+        display: flex;
+        flex-direction: column;
+        margin: 1rem;
+      }
+    }
+
+    &__form {
+      margin-top: 1.5rem;
+
+      &__size__item {
+        margin-left: 0.5rem;
+        background-color: $white-color;
+        color: #aaaaaa;
+        border: 0.0625rem solid #aaaaaa;
+        height: 3rem;
+        min-width: 3rem;
+        outline: 0;
+        transition: background-color 0.2s;
+        border-radius: 0.25rem;
+
+        &:hover {
+          background-color: transparent;
+          color: #44cbc8;
+          border-color: #44cbc8;
+        }
+
+        &.selected {
+          background-color: $dark-grey;
+          color: $white-color;
+          border: $dark-grey;
+        }
+      }
+    }
+
+  }
+
+  &__footer {
+    margin-top: 4rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+
+    &__btn {
+      width: calc(50% - 0.5rem);
+      background-color: transparent;
+      align-items: center;
+      cursor: pointer;
+      display: inline-flex;
+      justify-content:center;
+      line-height:1;
+      text-align: center;
+      white-space: nowrap;
+      min-width: 7.5rem;
+      height: 4rem;
+      padding: 0.1rem;
+      font-size: 1rem;
+      font-weight: $font-weight-regular;
+      border: 0.0625rem solid $dark-grey;
+      color: $dark-grey;
+      outline: none;
+      border-radius: 0.25rem;
+      letter-spacing: 0.06rem;
+
+      &.btn__submit {
+        background-color: #4d4d4d;
+        border-color: #4d4d4d;
+        color: $white-color;
+      }
+    }
+  }
+}

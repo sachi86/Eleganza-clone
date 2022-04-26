@@ -1,0 +1,68 @@
+@import "../../sass/main";
+
+.btn {
+    display: flex;
+}
+
+.btn__qty {
+    cursor: pointer;
+    background-color: $white-color;
+    width: 3.5rem;
+    height: 3.5rem;
+    border: 0.0625rem solid $dark-grey;
+    border-radius: 0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .2s ease-in-out;
+    margin: 0.8rem;
+
+    @include respond(tab-port) {
+        width: 100%;
+        align-items: center;
+    }
+
+    @include respond(phone) {
+        width: 100%;
+    }
+
+    &__minus,
+    &__plus {
+        &:hover,
+        &:active {
+            background-color: $dark-grey;
+
+            & > svg path {
+                fill: $white-color;
+
+            }
+        }
+    }
+
+    &__delete {
+        border-color: #ff5252;
+
+        & > svg path {
+            fill: #ff5252;
+        }
+
+        &:hover, 
+        &:active {
+            background-color: #ff5252;
+
+            & > svg path {
+                fill: $white-color;
+            }
+        }
+
+        @include respond(tab-port) {
+            padding: 0 2rem;
+        }
+    }
+
+    &__number {
+        border-color: #e0e0e0;
+        font-weight: $font-weight-strong;
+    }
+}
+

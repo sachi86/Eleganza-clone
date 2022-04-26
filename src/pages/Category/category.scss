@@ -1,0 +1,71 @@
+@import '../../sass/variables.scss';
+.search {
+  display: flex;
+  margin-top: 100px;
+  h3 {
+    margin-top: 20px;
+    margin-left: 90px;
+    font-family: $font-secondary;
+  }
+}
+
+.ais-Hits-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.pagination {
+  margin-bottom: 20px;
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ais-Pagination {
+  .ais-Pagination-list {
+    display: flex;
+  }
+  .ais-Pagination-link {
+    border: 1px solid;
+    height: 30px;
+    width: 30px;
+    padding: 10px;
+    margin-right: 10px;
+    &:hover {
+      background-color: black;
+      color: white;
+    }
+  }
+}
+
+.ais-Menu-count {
+  visibility: hidden;
+}
+
+.ais-RefinementList-list {
+  margin-bottom: 60px;
+  border-bottom: 1px solid #ebebeb;
+  padding-bottom: 20px;
+  margin-left: 90px;
+  margin-right: 20px;
+}
+
+.ais-RefinementList-label {
+  margin-top: 20px;
+  width: 350px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  .ais-RefinementList-labelText {
+    margin-left: 10px;
+  }
+  .ais-RefinementList-count {
+    margin-left: auto;
+    border-radius: 45%;
+    padding-left: 3px;
+    padding-right: 3px;
+    border-left: 1px solid;
+    border-right: 1px solid;
+  }
+}

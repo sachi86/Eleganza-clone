@@ -1,0 +1,35 @@
+.signIn__header {
+  height: 5.6rem;
+  display: flex;
+  padding: 0 2rem 0 2rem;
+  align-items: center;
+  margin-bottom: 24px;
+  background-color: #f8f8f8;
+
+  font-size: 16px;
+  font-family: 'Playfair Display', serif;
+  font-weight: 600;
+
+  &--titleWithCross {
+    margin-left: auto;
+  }
+  // h3 {
+  //   margin-top: 0;
+  // }
+}
+
+.signIn__header__btn {
+  border: none;
+  background-color: #f8f8f8;
+
+  &--arrow {
+    margin-right: auto;
+  }
+  &--cross {
+    margin-left: auto;
+  }
+  svg {
+    fill: #333;
+    width: 20px;
+  }
+}

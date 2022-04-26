@@ -1,0 +1,62 @@
+.card {
+  height: 450px;
+  width: 325px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #ebebeb;
+  padding-top: 20px;
+  overflow: hidden;
+  position: relative;
+}
+
+.picture {
+  background-color: transparent;
+  position: absolute;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.reduction {
+  background-color: black;
+  color: white;
+  position: relative;
+  font-size: 12px;
+  padding: 3px;
+  width: 100px;
+  margin-left: 20px;
+}
+
+.descriptif {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-top: 10px;
+}
+
+.bloc {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 10px;
+}
+
+.tarif2 {
+  text-decoration: line-through;
+  margin-right: 5px;
+}
+/*# sourceMappingURL=cardCategorie.css.map */

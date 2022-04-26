@@ -1,0 +1,199 @@
+@import '../../sass/main';
+
+.header--container {
+  display: grid;
+  grid-template-areas:
+    'form logo icon'
+    'form logo icon';
+  padding-left: 50px;
+  padding-right: 50px;
+  background-color: #fafafa;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  align-items: center;
+  @include respond(tab-port) {
+    grid-template-areas:
+      'logo icon'
+      'form form ';
+    padding: 1.6rem;
+  }
+  @include respond(phone) {
+    padding: 20px 10px;
+  }
+  @include respond(lilphone) {
+    grid-template-areas:
+      'logo '
+      'icon '
+      'form';
+  }
+}
+.logo {
+  grid-area: logo;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @include respond(tab-port) {
+    justify-content: flex-start;
+    padding-bottom: 1.5rem;
+  }
+  @include respond(phone) {
+    justify-content: flex-start;
+    img {
+      height: 20px;
+      width: 144px;
+    }
+  }
+  @include respond(lilphone) {
+    justify-content: center;
+  }
+}
+.icon {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-bottom: 1.5rem;
+  grid-area: icon;
+
+  @include respond(phone) {
+    padding-top: 1.5rem;
+  }
+  @include respond(lilphone) {
+    justify-content: center;
+  }
+}
+button.rond--bar {
+  display: none;
+  cursor: pointer;
+  @include respond(tab-port) {
+    display: flex;
+  }
+}
+.panier--number {
+  background-color: #44cbc8;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  right: -0.5rem;
+  font-size: 1rem;
+  color: $white-color;
+}
+.rond {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  background-color: #ebebeb;
+  margin-right: 20px;
+  border: none;
+  &:last-child {
+    margin-right: 0;
+  }
+  &--monnaie {
+    @include respond(tab-port) {
+      display: none;
+    }
+  }
+  &--panier {
+    position: relative;
+  }
+
+  &--add {
+    cursor: pointer;
+  }
+  svg {
+    color: #333;
+  }
+}
+.search--box {
+  grid-area: form;
+  align-items: center;
+  padding-left: 10px;
+
+  @include respond(tab-port) {
+    width: 100%;
+    margin: auto 0;
+  }
+}
+.search {
+  &--form {
+    display: flex;
+    align-items: center;
+    width: 100%;
+  }
+  &--input {
+    width: 100%;
+    height: 40px;
+    border: none;
+    outline: none;
+    border-radius: 50px;
+    font-size: 1.4rem;
+    background-color: #fafafa;
+    color: #333;
+    padding: 0.75rem 1rem 0.75rem 2.4rem;
+
+    &::placeholder {
+      color: #333;
+    }
+  }
+}
+.fa {
+  margin: 35%;
+}
+
+.container {
+  display: flex;
+  height: 35px;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 14px;
+  background-color: #ebebeb;
+}
+
+.check {
+  margin-right: 20px;
+}
+.header__head {
+  display: flex;
+  align-items: center;
+  @include respond(phone) {
+    &--1,
+    &--3 {
+      display: none;
+    }
+  }
+  p {
+    white-space: nowrap;
+    color: rgb(122, 122, 122);
+    font-size: 1.1rem;
+  }
+}
+.ais-SearchBox {
+  display: flex;
+
+  .ais-SearchBox-input {
+    width: 300px;
+    height: 50px;
+    background-color: transparent;
+    padding-left: 30px;
+    position: absolute;
+    border-radius: 5%;
+    border: 1px solid #bbb6b6;
+  }
+  .ais-SearchBox-submit {
+    height: 50px;
+    border: none;
+    background-color: transparent;
+    margin-left: 10px;
+    position: relative;
+  }
+  .ais-SearchBox-reset {
+    visibility: hidden;
+  }
+}

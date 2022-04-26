@@ -1,0 +1,30 @@
+@import '../../sass/mixins';
+.checkoutpage {
+  margin: auto;
+  max-width: 1290px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background-color: #f8f8f8;
+  @include respond(tab-port) {
+    grid-template-columns: 1fr;
+  }
+}
+.checkoutpage--container {
+  width: 100%;
+}
+.checkoutpage--container__right {
+  display: flex;
+  grid-column: 1;
+  flex-direction: column;
+  padding: 0 20px;
+  @include respond(tab-port) {
+    grid-template-columns: 1fr;
+  }
+}
+.checkoutpage--container__left {
+  display: flex;
+  grid-column: 2;
+  @include respond(tab-port) {
+    grid-column: 1;
+  }
+}

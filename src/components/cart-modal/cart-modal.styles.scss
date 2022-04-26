@@ -1,0 +1,119 @@
+@import "../../sass/main";
+
+.cart-modal {
+    transform: translate3d(0, 0, 0);
+    transition-duration: 5s;
+    max-width: 23.4375rem;
+    display: grid;
+    grid-template-rows: min-content;
+    align-content: start;
+    position: fixed;
+    transition-property: opacity, transform, visibility;
+    transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
+
+    @include respond(phone) {
+        display:block;
+        font-size: 150%;
+        top: 4.1rem;
+        right: 0;
+        width: 88vw;
+        margin: auto;
+    }
+
+    &__content {
+    &.empty {
+      padding: 1.5rem;
+      align-items: center;
+      min-height: 10rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+
+      span {
+        margin: 1.5rem 0;
+        color: $dark-grey;
+        font-family: $font-secondary;
+        font-weight: $font-weight-regular;
+      }
+    }
+    }
+&__footer {
+  padding: 2.5rem 2rem 2rem 2rem;
+  padding-top: 2rem;
+
+  &__total {
+    margin-top: 1rem;
+    padding-top: 1.5rem;
+    border-top: 0.0625rem dashed #e0e0e0;
+    padding-bottom: 2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    &__name {
+      display: flex;
+      flex-direction: column;
+      & span:nth-child(2) {
+        font-weight: $font-weight-regular;
+        font-style: italic;
+        font-size: 0.9rem;
+        text-align: left;
+      }
+    }
+
+    &__value {
+      font-weight: $font-weight-strong;
+    }
+  }
+}
+    &__box__btn {
+      padding: 2.5rem 2rem 2rem 2rem;
+      display: grid;
+    }
+
+    &__btn {
+      align-items: center;
+      cursor: pointer;
+      display: inline-flex;
+      justify-content: center;
+      line-height: 1;
+      text-align: center;
+      white-space: nowrap;
+      min-width: 7.5rem;
+      height: 4rem;
+      padding: 0 1.5rem;
+      font-size: 1rem;
+      font-weight: $font-weight-semi-strong;
+      outline: none;
+      border-radius: 0.25rem;
+      letter-spacing: 0.06em;
+      background-color: $dark-grey;
+      color: $white-color;
+
+      &.order {
+        background-color: #44cbc8;
+        border: 0.125rem solid #44cbc8;
+        color: $dark-grey;
+        &:hover {
+          background-color: #6cd6d4;
+        }
+      }
+
+        &.continue {
+          &.link {
+            background-color: transparent;
+            color: $dark-grey;
+            border: 0;
+
+            &:hover {
+              background-color: transparent;
+              text-decoration: underline;
+            }
+          }
+          &:hover {
+            background-color: #4d4d4d;
+          }
+        }
+    }
+}

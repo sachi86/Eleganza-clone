@@ -1,0 +1,67 @@
+@import "../../sass/variables";
+
+.cart-item {
+    padding: 2rem 2rem;
+    display: flex;
+    align-items: center;
+    font-size: 1.2rem;
+    min-height: 10rem;
+    border-bottom: 0.0625rem solid #e0e0e0;
+
+    &__img__container {
+        border-radius: 0.25rem;
+        background-color: #f1f1f1;
+        display: flex;
+        height: 10rem;
+        width: 7rem;
+        align-items: center;
+    }
+
+    &__img {
+        top: 0;
+        left: 0;
+        width: 7rem;
+    }
+
+    &__details {
+        margin-left: 1.5rem;
+        flex-grow: 1;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        color: $dark-grey;
+        text-align: left;
+        line-height: 2.5rem;
+        color: $dark-grey;
+        font-weight: $font-weight-strong;
+        padding-bottom: 2rem;
+        justify-content: space-between;
+
+        &__box__size__options {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        &__size__value {
+            font-weight: $font-weight-medium;
+        }
+
+        &__options {
+            font-size: 1rem;
+            cursor: pointer;
+            font-weight: $font-weight-strong;
+            text-decoration: underline;
+        }
+
+        &__box__qty__total {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        &__price__total {
+            font-size: 1.5rem;
+            color: $dark-grey;
+            font-weight: $font-weight-strong;
+        }
+    }
+}

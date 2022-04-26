@@ -1,0 +1,335 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;700&display=swap");
+/* 
+0 - 600px : Phone (ref : 375px)
+600 - 900px: Tablet portrait (ref : 768px)
+900 - 1200px : Tablet landscape
+[1200 - 1800] is where our normal syles apply
+1800px + : Big desktop
+*/
+/* $breakpoint arguement choices:
+- phone
+- tab-port
+- tab-land 
+- big-desktop
+
+ORDER: Base + typography > general layout + grid > pge layout > components
+
+1em = 16px
+only screen is to avoid media queries are applied in case of printing for example
+*/
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;700&display=swap");
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 62.5%;
+  /* root font-size to rem - correspond to 10px but not in px to authorize user to change default font size of his browser - 1rem = 10px; 10px/16px = 62.5% - 16px default size browser font*/
+}
+
+@media only screen and (max-width: 75em) {
+  html {
+    font-size: 56.25%;
+  }
+}
+
+@media only screen and (max-width: 56.25em) {
+  html {
+    font-size: 50%;
+  }
+}
+
+@media only screen and (min-width: 112.5em) {
+  html {
+    font-size: 75%;
+  }
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  line-height: 26px;
+  font-size: 16px;
+  background-color: #ffffff;
+  color: #333;
+}
+
+.navbar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  background-color: #333;
+  color: #fafafa;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+}
+
+@media only screen and (max-width: 56.25em) {
+  .navbar {
+    display: none;
+  }
+}
+
+.navbar-ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 0;
+}
+
+@media only screen and (max-width: 56.25em) {
+  .navbar-ul {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+}
+
+.cool-link {
+  font-size: 1.15rem;
+  color: #fafafa;
+  text-transform: uppercase;
+  color: #fafafa;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  height: 4.6rem;
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0 1.5rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  white-space: nowrap;
+  font-weight: 600;
+}
+
+@media only screen and (max-width: 56.25em) {
+  .cool-link {
+    font-size: 1.7rem;
+    font-weight: 600;
+    color: #333;
+  }
+}
+
+.navbar--li {
+  border-bottom: 2px solid rgba(240, 240, 240, 0);
+  /* for Safari */
+  background-clip: padding-box;
+  -webkit-transition: border 0.2s ease-in-out;
+  transition: border 0.2s ease-in-out;
+}
+
+.navbar--li--active {
+  border-bottom: 2px solid #f0f0f0;
+}
+
+@media only screen and (max-width: 56.25em) {
+  .navbar--li {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 100%;
+    height: 7rem;
+    background-color: #ebebeb;
+    border-bottom: 2px solid #dadada;
+    -webkit-transition: none;
+    transition: none;
+    padding: 0 1rem;
+  }
+  .navbar--li--active {
+    border: none;
+  }
+}
+
+.dropdown-container-hidden {
+  display: none;
+}
+
+.dropdown-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  height: 420px;
+  margin-top: 2px;
+  padding: 3rem 1.6rem 3rem 1.6rem;
+  width: 100%;
+  position: absolute;
+  z-index: 100;
+  left: 0;
+  background-color: #333;
+}
+
+.dropdown--link:after {
+  position: absolute;
+  content: '';
+  display: block;
+  bottom: -4px;
+  left: 0px;
+  right: 0px;
+  width: 0;
+  height: 3px;
+  background: #fafafa;
+  -webkit-transition: width 0.3s;
+  transition: width 0.3s;
+}
+
+.dropdown--title:first-child {
+  font-family: Playfair Display;
+  font-size: 2rem;
+}
+
+.dropdown--link {
+  color: #fafafa;
+  text-decoration: none;
+  position: relative;
+}
+
+.dropdown--link:hover::after {
+  width: 100%;
+}
+
+.dropdown--title, .dropdown--li {
+  white-space: nowrap;
+  font-size: 1.2rem;
+  margin-bottom: 0.6rem;
+  display: inline-block;
+  border-bottom: 0.0625rem solid transparent;
+}
+
+.ulDropdown {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 0 6rem 0 0;
+}
+
+.ulDropdown:not(:first-child) {
+  border-left: 0.1rem solid rgba(122, 122, 122, 0.56);
+  padding: 0 6rem 0 6rem;
+}
+
+.mobile-navigation {
+  display: none;
+}
+
+@media only screen and (max-width: 56.25em) {
+  .mobile-navigation {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    z-index: 20;
+    position: fixed;
+    width: 25em;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    background-color: #333;
+  }
+}
+
+@media only screen and (max-width: 37.5em) {
+  .mobile-navigation {
+    width: 100%;
+  }
+}
+
+.mobile-navigation__head {
+  padding: 2rem;
+  padding-top: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #333;
+  background-color: #ebebeb;
+  text-transform: uppercase;
+}
+
+.mobile-navigation__head button {
+  outline: none;
+  border: none;
+}
+
+.mobile--button {
+  border: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  font-size: 2rem;
+  color: #333;
+}
+
+.mobile--name::first-letter {
+  text-transform: uppercase;
+}
+/*# sourceMappingURL=Navbar.css.map */

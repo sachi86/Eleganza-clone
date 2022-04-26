@@ -1,0 +1,93 @@
+@import '../../sass/main';
+
+.accordion {
+  display: flex;
+  flex-direction: column;
+
+  &__btn {
+    cursor: pointer;
+    border: none;
+    display: flex;
+    width: 100%;
+    outline: none;
+    background-color: transparent;
+    padding: 0;
+  }
+}
+.address-form__text-input {
+  color: aqua;
+}
+.textfield {
+  display: flex;
+  flex-direction: column;
+}
+.address-form {
+  max-width: 100%;
+  padding: 1rem;
+  margin: 0 auto;
+  background-color: #fff;
+  box-shadow: 0 0.0625rem 0.1875rem rgb(0 0 0 / 9%),
+    0 0.0625rem 0.125rem #f8f8f8;
+  display: flex;
+}
+.error {
+  opacity: 1;
+  background-color: #ff5252;
+  color: #fff;
+  text-shadow: 0.03125rem 0.0625rem 0.0625rem rgb(0 0 0 / 30%);
+  margin-top: 0.625rem;
+  padding: 0.25rem 0.5rem;
+  height: auto;
+  transition: height 0ms 0ms, opacity 600ms 0ms;
+  position: relative;
+  border-bottom-left-radius: 0.7rem;
+  border-bottom-right-radius: 0.7rem;
+  font-size: 1rem;
+  &::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 0;
+    border-left: 0.3125rem solid transparent;
+    border-right: 0.3125rem solid transparent;
+    border-bottom: 0.3125rem solid #ff5252;
+    position: absolute;
+    top: -0.3125rem;
+    position: absolute;
+  }
+}
+.form-group {
+  width: 50%;
+  padding: 0.5rem;
+}
+.inputField {
+  height: 3.8rem;
+  padding-left: 1.5rem;
+  border: 0.1rem solid #e0e0e0;
+  border-radius: 0.35rem;
+  font-size: 1.6rem;
+  &:focus {
+    outline: none;
+  }
+}
+.is-invalid {
+  border-bottom: 0.125rem solid #ff5252;
+}
+.similar {
+  flex-direction: row-reverse;
+}
+.similarLabel {
+  margin-left: 0.5rem;
+}
+.errorLabel {
+  color: #ff5252 !important;
+}
+.labelShipping {
+  font-size: 1.4rem;
+  color: #000;
+  margin-bottom: 0.5rem;
+}
+.is-valid {
+  color: #43a047;
+  border-bottom-color: #43a047 !important;
+}

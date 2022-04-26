@@ -1,0 +1,93 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;700&display=swap");
+.cart-item {
+  padding: 2rem 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 1.2rem;
+  min-height: 10rem;
+  border-bottom: 0.0625rem solid #e0e0e0;
+}
+
+.cart-item__img__container {
+  border-radius: 0.25rem;
+  background-color: #f1f1f1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 10rem;
+  width: 7rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.cart-item__img {
+  top: 0;
+  left: 0;
+  width: 7rem;
+}
+
+.cart-item__details {
+  margin-left: 1.5rem;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  color: #333;
+  text-align: left;
+  line-height: 2.5rem;
+  color: #333;
+  font-weight: 700;
+  padding-bottom: 2rem;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.cart-item__details__box__size__options {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.cart-item__details__size__value {
+  font-weight: 500;
+}
+
+.cart-item__details__options {
+  font-size: 1rem;
+  cursor: pointer;
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+.cart-item__details__box__qty__total {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.cart-item__details__price__total {
+  font-size: 1.5rem;
+  color: #333;
+  font-weight: 700;
+}
+/*# sourceMappingURL=cart-item.styles.css.map */

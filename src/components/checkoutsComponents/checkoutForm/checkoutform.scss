@@ -1,0 +1,56 @@
+.CheckoutForm--container {
+  display: flex;
+  flex-direction: column;
+}
+.CheckoutForm--form {
+  display: grid;
+  grid-template-areas:
+    'firstname lastname'
+    'postalCode number'
+    'street city '
+    'country state'
+    'phone email';
+  grid-template-columns: 1fr 1fr;
+}
+.containerForm {
+  display: flex;
+  flex-direction: column;
+}
+.container {
+  &--firstname {
+    grid-area: 'firstname';
+  }
+  &--lastname {
+    grid-area: 'lastname';
+  }
+  &--email {
+    grid-area: 'email';
+  }
+  &--phone {
+    grid-area: 'phone';
+  }
+  &--address {
+    grid-area: 'address';
+  }
+  &--city {
+    grid-area: 'city';
+  }
+  &--state {
+    grid-area: 'state';
+  }
+  &--phone {
+    grid-area: 'phone';
+  }
+  &--postalCode {
+    grid-area: 'postalCode';
+  }
+  &--country {
+    grid-area: 'country';
+  }
+  &--number {
+    grid-area: 'number';
+  }
+  &--street {
+    grid-area: 'street';
+  }
+}

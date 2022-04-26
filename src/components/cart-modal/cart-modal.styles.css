@@ -1,0 +1,229 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;700&display=swap");
+/* 
+0 - 600px : Phone (ref : 375px)
+600 - 900px: Tablet portrait (ref : 768px)
+900 - 1200px : Tablet landscape
+[1200 - 1800] is where our normal syles apply
+1800px + : Big desktop
+*/
+/* $breakpoint arguement choices:
+- phone
+- tab-port
+- tab-land 
+- big-desktop
+
+ORDER: Base + typography > general layout + grid > pge layout > components
+
+1em = 16px
+only screen is to avoid media queries are applied in case of printing for example
+*/
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;700&display=swap");
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 62.5%;
+  /* root font-size to rem - correspond to 10px but not in px to authorize user to change default font size of his browser - 1rem = 10px; 10px/16px = 62.5% - 16px default size browser font*/
+}
+
+@media only screen and (max-width: 75em) {
+  html {
+    font-size: 56.25%;
+  }
+}
+
+@media only screen and (max-width: 56.25em) {
+  html {
+    font-size: 50%;
+  }
+}
+
+@media only screen and (min-width: 112.5em) {
+  html {
+    font-size: 75%;
+  }
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  line-height: 26px;
+  font-size: 16px;
+  background-color: #ffffff;
+  color: #333;
+}
+
+.cart-modal {
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+  -webkit-transition-duration: 5s;
+          transition-duration: 5s;
+  max-width: 23.4375rem;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: min-content;
+      grid-template-rows: -webkit-min-content;
+      grid-template-rows: min-content;
+  -ms-flex-line-pack: start;
+      align-content: start;
+  position: fixed;
+  -webkit-transition-property: opacity, visibility, -webkit-transform;
+  transition-property: opacity, visibility, -webkit-transform;
+  transition-property: opacity, transform, visibility;
+  transition-property: opacity, transform, visibility, -webkit-transform;
+  -webkit-transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
+          transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
+}
+
+@media only screen and (max-width: 37.5em) {
+  .cart-modal {
+    display: block;
+    font-size: 150%;
+    top: 4.1rem;
+    right: 0;
+    width: 88vw;
+    margin: auto;
+  }
+}
+
+.cart-modal__content.empty {
+  padding: 1.5rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 10rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+}
+
+.cart-modal__content.empty span {
+  margin: 1.5rem 0;
+  color: #333;
+  font-family: "Playfair Display", serif;
+  font-weight: 400;
+}
+
+.cart-modal__footer {
+  padding: 2.5rem 2rem 2rem 2rem;
+  padding-top: 2rem;
+}
+
+.cart-modal__footer__total {
+  margin-top: 1rem;
+  padding-top: 1.5rem;
+  border-top: 0.0625rem dashed #e0e0e0;
+  padding-bottom: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.cart-modal__footer__total__name {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.cart-modal__footer__total__name span:nth-child(2) {
+  font-weight: 400;
+  font-style: italic;
+  font-size: 0.9rem;
+  text-align: left;
+}
+
+.cart-modal__footer__total__value {
+  font-weight: 700;
+}
+
+.cart-modal__box__btn {
+  padding: 2.5rem 2rem 2rem 2rem;
+  display: -ms-grid;
+  display: grid;
+}
+
+.cart-modal__btn {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  line-height: 1;
+  text-align: center;
+  white-space: nowrap;
+  min-width: 7.5rem;
+  height: 4rem;
+  padding: 0 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  outline: none;
+  border-radius: 0.25rem;
+  letter-spacing: 0.06em;
+  background-color: #333;
+  color: #ffffff;
+}
+
+.cart-modal__btn.order {
+  background-color: #44cbc8;
+  border: 0.125rem solid #44cbc8;
+  color: #333;
+}
+
+.cart-modal__btn.order:hover {
+  background-color: #6cd6d4;
+}
+
+.cart-modal__btn.continue.link {
+  background-color: transparent;
+  color: #333;
+  border: 0;
+}
+
+.cart-modal__btn.continue.link:hover {
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+.cart-modal__btn.continue:hover {
+  background-color: #4d4d4d;
+}
+/*# sourceMappingURL=cart-modal.styles.css.map */

@@ -1,0 +1,82 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&family=Playfair+Display&display=swap");
+@media screen and (max-width: 56.29em) {
+  .cardHome {
+    max-width: 99%;
+    height: auto;
+    margin: none;
+  }
+}
+
+.card-text {
+  padding-left: 20px;
+  padding-bottom: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  z-index: 2;
+}
+
+.titre-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  font-size: 30px;
+  color: white;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.titre-card .title {
+  margin-bottom: 20px;
+}
+
+.buy {
+  margin-top: 10px;
+  color: white;
+  font-size: 14px;
+}
+
+.valentino {
+  margin-left: 80px;
+  color: black;
+  font-size: 15px;
+  position: relative;
+}
+
+.text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  margin-top: 80px;
+  margin-left: 40px;
+  margin-right: 43px;
+  text-align: left;
+  font-size: 14px;
+  position: absolute;
+  color: #333333;
+}
+
+.text .text-title {
+  font-family: 'Playfair display';
+  color: #4a4a4a;
+  margin-bottom: 20px;
+}
+/*# sourceMappingURL=cardHome.css.map */

@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "error-display.styles.scss"
+    ],
+    "names": [],
+    "file": "error-display.styles.css"
+}

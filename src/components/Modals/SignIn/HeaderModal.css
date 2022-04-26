@@ -1,0 +1,38 @@
+.signIn__header {
+  height: 5.6rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0 2rem 0 2rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 24px;
+  background-color: #f8f8f8;
+  font-size: 16px;
+  font-family: 'Playfair Display', serif;
+  font-weight: 600;
+}
+
+.signIn__header--titleWithCross {
+  margin-left: auto;
+}
+
+.signIn__header__btn {
+  border: none;
+  background-color: #f8f8f8;
+}
+
+.signIn__header__btn--arrow {
+  margin-right: auto;
+}
+
+.signIn__header__btn--cross {
+  margin-left: auto;
+}
+
+.signIn__header__btn svg {
+  fill: #333;
+  width: 20px;
+}
+/*# sourceMappingURL=HeaderModal.css.map */

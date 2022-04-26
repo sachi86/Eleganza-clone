@@ -1,0 +1,195 @@
+@import '../../sass/main.scss';
+.navbarContainer {
+  @include respond(tab-port) {
+    // position: fixed;
+    // top: 0;
+    // // left: 0;
+    // right: 0;
+    // bottom: 0;
+    // width: 100%;
+    // z-index: 100;
+    // background-color: rgba(36, 36, 36, 0.49);
+  }
+}
+.navbar {
+  display: flex;
+  width: 100%;
+  background-color: #333;
+  color: #fafafa;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  @include respond(tab-port) {
+    display: none;
+  }
+}
+.navbar-ul {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+
+  @include respond(tab-port) {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+}
+
+.cool-link {
+  font-size: 1.15rem;
+  color: #fafafa;
+  text-transform: uppercase;
+  color: #fafafa;
+  cursor: pointer;
+  user-select: none;
+  height: 4rem;
+  list-style: none;
+  display: flex;
+  padding: 0 1.5rem;
+  align-items: center;
+  white-space: nowrap;
+  font-weight: 600;
+  @include respond(tab-port) {
+    font-size: 1.7rem;
+    font-weight: 600;
+    color: #333;
+  }
+}
+.navbar--li {
+  border-bottom: 2px solid rgba(240, 240, 240, 0);
+  -webkit-background-clip: padding-box; /* for Safari */
+  background-clip: padding-box;
+  transition: border 0.2s ease-in-out;
+  cursor: pointer;
+  &--active {
+    border-bottom: 2px solid rgba(240, 240, 240, 1);
+  }
+  @include respond(tab-port) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 7rem;
+    background-color: #ebebeb;
+    border-bottom: 2px solid #dadada;
+    transition: none;
+    padding: 0 1rem;
+    &--active {
+      border: none;
+    }
+  }
+}
+
+.dropdown-container-hidden {
+  display: none;
+}
+.dropdown-container {
+  display: flex;
+  justify-content: flex-start;
+  height: 420px;
+  margin-top: 2px;
+  padding: 3rem 1.6rem 3rem 1.6rem;
+  width: 100%;
+  position: absolute;
+  z-index: 100;
+  left: 0;
+  background-color: #333;
+}
+.dropdown--link:after {
+  position: absolute;
+  content: '';
+  display: block;
+  bottom: -4px;
+  left: 0px;
+  right: 0px;
+  width: 0;
+  height: 3px;
+  background: #fafafa;
+  transition: width 0.3s;
+}
+.dropdown--title:first-child {
+  font-family: Playfair Display;
+  font-size: 2rem;
+}
+.dropdown {
+  &--link {
+    color: #fafafa;
+    text-decoration: none;
+    position: relative;
+    cursor: pointer;
+    &:hover::after {
+      width: 100%;
+    }
+  }
+  &--title,
+  &--li {
+    white-space: nowrap;
+    font-size: 1.2rem;
+    margin-bottom: 0.6rem;
+    display: inline-block;
+    border-bottom: 0.0625rem solid transparent;
+  }
+}
+.ulDropdown {
+  display: flex;
+  flex-direction: column;
+  padding: 0 6rem 0 0;
+  &:not(:first-child) {
+    border-left: 0.1rem solid rgba(122, 122, 122, 0.56);
+    padding: 0 6rem 0 6rem;
+  }
+}
+
+.mobile-navigation {
+  display: none;
+  @include respond(tab-port) {
+    display: flex;
+    flex-direction: column;
+    z-index: 20;
+    position: fixed;
+    width: 25em;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    background-color: #333;
+  }
+  @include respond(phone) {
+    width: 100%;
+  }
+  &__head {
+    padding: 2rem;
+    padding-top: 2rem;
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #333;
+    background-color: #ebebeb;
+    text-transform: uppercase;
+    button {
+      outline: none;
+      border: none;
+    }
+  }
+}
+.mobile {
+  &--button {
+    border: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 2rem;
+    color: #333;
+  }
+  &--name {
+    &::first-letter {
+      text-transform: uppercase;
+    }
+  }
+}

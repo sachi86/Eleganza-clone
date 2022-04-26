@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&family=Playfair+Display&display=swap');
+
+.etiquette {
+  height: 105px;
+  width: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  color: #fff;
+  position: relative;
+  margin-top: 15px;
+  line-height: 105px;
+  margin-left: 18px;
+  text-align: center;
+  font-family: 'Playfair display';
+  @media screen and (max-width: 56.25em) {
+    max-width: 99%;
+    margin-left: none;
+  }
+}

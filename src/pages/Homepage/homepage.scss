@@ -1,0 +1,41 @@
+.homepage {
+  margin: auto;
+  max-width: 1290px;
+}
+
+.ligne {
+  display: flex;
+
+  @media screen and (max-width: 56.25em) {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-left: none;
+    margin-right: none;
+  }
+}
+
+.ligne-etiquette {
+  display: flex;
+}
+
+.ligne-vertical {
+  display: flex;
+  flex-direction: column;
+  @media screen and (max-width: 56.25em) {
+    align-items: center;
+  }
+}
+
+.last-line {
+  display: flex;
+  align-items: center;
+
+  @media screen and (max-width: 56.25em) {
+    flex-direction: column;
+    margin-left: none;
+    margin-right: none;
+    justify-content: center;
+    align-items: center;
+  }
+}
