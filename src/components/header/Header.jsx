@@ -76,6 +76,8 @@ function Header({handleClick, handleChange, handleLogo}) {
         </div>
 
         <div className="icon">
+          <button className="rond rond--flag">
+          </button>
           <button className="rond rond--monnaie">
             <FontAwesomeIcon className="fa" icon={faEuroSign} />
           </button>
