@@ -17,7 +17,7 @@ function Homepage() {
         <CardHome
           title1="Nouvelles"
           title2="Marques"
-          image="https://static.eleganza-shop.com/media/experius/content/block/ELEGANZA_Alexander_McQueen_1.jpg"
+          image="https://static.eleganza-shop.com/media/experius/content/block/MERCER_Banner.png"
           format="large"
           handleCard={() => handleCard('', 'Alexander McQueen')}
         />
@@ -25,7 +25,7 @@ function Homepage() {
           title1="Vêtements"
           title2="Pour"
           title3="Kids"
-          image="https://static.eleganza-shop.com/media/experius/content/block/DADABFC7-FCF0-4AE7-BA13-1EC53DFCAB2E_1.png"
+          image="https://static.eleganza-shop.com/media/experius/content/block/0T7A1648_1_.png"
           format="large"
           handleCard={() => handleCard('Kids')}
         />
@@ -35,7 +35,7 @@ function Homepage() {
           <CardHome
             title1="Chaussures"
             title2="Hommes"
-            image="https://static.eleganza-shop.com/media/experius/content/block/ELEGANZA_Stone_Kids_1.jpg"
+            image="https://static.eleganza-shop.com/media/experius/content/block/0T7A1589.png"
           />
           <CardHome
             title1="Chaussures"
@@ -49,7 +49,7 @@ function Homepage() {
           title1="Vetements"
           title2="Pour"
           title3="Hommes"
-          image="https://static.eleganza-shop.com/media/experius/content/block/0T7A0788_1.jpg"
+          image="https://static.eleganza-shop.com/media/experius/content/block/Palm_4_Aspect_16x9_1_.png"
           format="large"
           handleCard={() => handleCard('Homme')}
         />
@@ -70,7 +70,7 @@ function Homepage() {
             image="https://static.eleganza-shop.com/media/experius/content/block/BalenciagaMedium.png"
             handleCard={() => handleCard('', 'Balenciaga')}
           />
-          <Etiquette couleur="vert" nom="SALE" />
+          <Etiquette couleur="vert" nom="OUTLET" />
         </div>
       </div>
       <div className="ligne">

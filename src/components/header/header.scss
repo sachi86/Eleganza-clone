@@ -96,7 +96,8 @@ button.rond--bar {
     margin-right: 0;
   }
   &--flag {
-    background-image: url("../../assets/french-flag.svg");
+    width: 50%;
+    border-radius: 50%;
   }
   &--monnaie {
     @include respond(tab-port) {
