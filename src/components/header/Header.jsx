@@ -9,6 +9,7 @@ import {faEuroSign, faUser, faCheck} from '@fortawesome/free-solid-svg-icons'
 import Logo from '../../assets/eleganza.svg'
 import {SearchBox, Configure} from 'react-instantsearch-dom'
 import {ReactComponent as IconCart} from '../../assets/icon-cart.svg'
+import FrenchFlag from '../../assets/french-flag .svg'
 // ** Components **
 import Navbar from '../navbar/Navbar'
 import MainCart from '../Modals/Cart/MainCart'
@@ -18,6 +19,7 @@ import ErrorDisplay from '../error-display/error-display.component'
 import {CartContext} from '../../contexts/CartContext'
 import {ThemeContext} from '../../App'
 import {SignInModalsContext} from '../../contexts/SignInModalsContext.jsx'
+
 
 function Header({handleClick, handleChange, handleLogo}) {
   const [cartInfo] = useContext(CartContext)
@@ -76,10 +78,11 @@ function Header({handleClick, handleChange, handleLogo}) {
         </div>
 
         <div className="icon">
-          <button className="rond rond--flag">
-          </button>
           <button className="rond rond--monnaie">
             <FontAwesomeIcon className="fa" icon={faEuroSign} />
+          </button>
+          <button className="rond ">
+            <img className="rond--flag" src={FrenchFlag}/>
           </button>
           <button className="rond rond--user" onClick={handleOpenModalIdentify}>
             <FontAwesomeIcon className="fa" icon={faUser} />

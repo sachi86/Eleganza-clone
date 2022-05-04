@@ -26,7 +26,7 @@ export const fetchChaussureById = async id => {
     }
 
     const product = await request(endpoint, queryChaussure, variables)
-    product.chaussure.sizeSelected = product.chaussure.size[0]
+    product.chaussure.sizeSelected = product?.chaussure.size[0]
     return product
   } catch (e) {
     console.error(e)
