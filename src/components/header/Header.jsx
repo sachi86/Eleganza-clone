@@ -51,7 +51,7 @@ function Header({handleClick, handleChange, handleLogo}) {
       <div className="container">
         <div className="header__head  header__head--1">
           <FontAwesomeIcon className="check" icon={faCheck} />
-          <p>Livraisons rapides dans les 1-3 jours ouvrables </p>
+          <a href="../pages/FreeDelivery/FreeDevilevry">Livraisons rapides dans les 1-3 jours ouvrables </a>
         </div>
         <div className="header__head header__head--2">
           <FontAwesomeIcon className="check" icon={faCheck} />

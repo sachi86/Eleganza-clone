@@ -4,6 +4,7 @@ import Homepage from './pages/Homepage/Homepage.jsx'
 import CheckoutPage from './pages/Checkout/CheckoutPage.jsx'
 import Footer from './components/Footer/Footer.jsx'
 import PageError from './pages/PageError/PageError.jsx'
+import FreeDelivery from './pages/FreeDelivery/FreeDevilevry'
 import React, {useEffect, useContext} from 'react'
 import {
   Routes,
@@ -88,6 +89,7 @@ function App() {
               />
               <Route path="/404" element={<PageError />} />
               <Route path="*" element={<Navigate replace to="/404" />} />
+              <Route path="/free-delivery" element={<FreeDelivery />} />
             </Routes>
           </InstantSearch>
           <Footer />
