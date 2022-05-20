@@ -21,6 +21,7 @@ import {ThemeContext} from '../../App'
 import {SignInModalsContext} from '../../contexts/SignInModalsContext.jsx'
 
 
+
 function Header({handleClick, handleChange, handleLogo}) {
   const [cartInfo] = useContext(CartContext)
   const [themeValue, setThemeValue] = useContext(ThemeContext)
@@ -51,15 +52,15 @@ function Header({handleClick, handleChange, handleLogo}) {
       <div className="container">
         <div className="header__head  header__head--1">
           <FontAwesomeIcon className="check" icon={faCheck} />
-          <a href="../pages/FreeDelivery/FreeDevilevry">Livraisons rapides dans les 1-3 jours ouvrables </a>
+          <Link to="/404">Livraisons rapides dans les 1-3 jours ouvrables </Link>
         </div>
         <div className="header__head header__head--2">
           <FontAwesomeIcon className="check" icon={faCheck} />
-          <p> Livraison gratuite en Europe! </p>
+          <Link to="/free-delivery"> Livraison gratuite en Europe! </Link>
         </div>
         <div className="header__head  header__head--3">
           <FontAwesomeIcon className="check" icon={faCheck} />
-          <p>Garantie de remboursement! aussi sur les articles en vente </p>
+          <Link to="/money-back-garantee">Garantie de remboursement! aussi sur les articles en vente </Link>
         </div>
       </div>
       <div className="  header--container">

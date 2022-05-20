@@ -4,29 +4,25 @@ import Homepage from './pages/Homepage/Homepage.jsx'
 import CheckoutPage from './pages/Checkout/CheckoutPage.jsx'
 import Footer from './components/Footer/Footer.jsx'
 import PageError from './pages/PageError/PageError.jsx'
-import FreeDelivery from './pages/FreeDelivery/FreeDevilevry'
-import React, {useEffect, useContext} from 'react'
-import {
-  Routes,
-  Route,
-  Navigate,
-  useNavigate,
-  useLocation,
-} from 'react-router-dom'
+import FreeDelivery from "./pages/FreeDelivery/FreeDelivery"
+import MoneyBackGarantee from "./pages/MoneyBackGarantee/MoneyBackGarantee"
+import React, {useContext, useEffect} from 'react'
+import {Navigate, Route, Routes, useLocation, useNavigate,} from 'react-router-dom'
 import SignInModalsContextProvider from './contexts/SignInModalsContext.jsx'
 import CartContextProvider from './contexts/CartContext.jsx'
 import Productpage from './pages/ProductPage/Productpage.jsx'
 import {InstantSearch} from 'react-instantsearch-dom'
 import algoliasearch from 'algoliasearch/lite'
 import {ContextCategory} from './contexts/ContextCategory'
+
+
 export const ThemeContext = React.createContext('')
 
 function App() {
   const initTheme = () => {
-    let themeValue = {
+    return {
       overlay: false,
     }
-    return themeValue
   }
   const [themeValue, setThemeValue] = React.useState(() => initTheme())
   const theme = [themeValue, setThemeValue]
@@ -90,6 +86,7 @@ function App() {
               <Route path="/404" element={<PageError />} />
               <Route path="*" element={<Navigate replace to="/404" />} />
               <Route path="/free-delivery" element={<FreeDelivery />} />
+              <Route path="/money-back-garantee" element={<MoneyBackGarantee />} />
             </Routes>
           </InstantSearch>
           <Footer />

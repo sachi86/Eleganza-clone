@@ -1,0 +1,31 @@
+.customer_question_accordion {
+  display: flex;
+  flex-direction: column;
+  margin-left: 5%;
+  width: 40%;
+  &_title {
+    margin-bottom: 2vh;
+  }
+  &_button {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    padding: 1rem;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    h4 {
+      font-weight: 600;
+      font-size: 1.3rem;
+    }
+    svg {
+      justify-self: flex-end;
+    }
+  }
+  &_paragraph {
+    font-size: 1rem;
+    margin-left: 11px;
+  }
+}

@@ -1,0 +1,11 @@
+.container__customer__service {
+  &__title {
+    margin-bottom: 2vh;
+  }
+  &__item {
+    font-size: 1rem;
+    &:hover {
+      border-bottom: 1px solid black;
+    }
+  }
+}
