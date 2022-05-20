@@ -1,14 +1,19 @@
 import React from "react";
-import './customer-service-menu.scss'
-
+import {Link} from "react-router-dom";
+import "./customer-service-menu.scss";
+import {linksCustomerService} from "./customer-service-items";
 
 const CustomerServiceMenu =()=> {
-    const linksCustomerService = ["Contact", "Question fréquentes", "Commande", "Payer", "Livraison", "Echange et retours", "Réclamations et garantie", "Maintenance", "Magasins"]
     return(
-        <ul>
-            {linksCustomerService.map(link =>(
-                <li><a key={link.index}>{link.value}</a></li>))}
-        </ul>
+        <div className="container__customer__service">
+            <h3 className="container__customer__service__title">Customer service menu</h3>
+            <ul>
+                <Link to="/404">
+                {linksCustomerService.map(link =>(
+                    <li  key={link.id}><span className="container__customer__service__item">{link.name}</span></li>))}
+                </Link>
+            </ul>
+        </div>
     )
 }
 

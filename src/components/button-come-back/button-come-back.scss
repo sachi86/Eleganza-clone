@@ -1,0 +1,11 @@
+.btn__come__back {
+  margin: 4vh;
+  color: white;
+  background-color: #333;
+  padding: 1.4rem 1.7rem;
+  border-radius: 5px;
+  border: none;
+   &:hover {
+     background-color: #4d4d4d;
+   }
+}

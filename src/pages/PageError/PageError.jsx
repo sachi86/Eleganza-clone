@@ -1,14 +1,17 @@
 import React from 'react'
+
 import './pageError.scss'
+import ButtonComeBack from "../../components/button-come-back/button-come-back";
+
 const PageError = () => {
   return (
     <div className="error__container">
       <main className="error__main">
-        <h1>Oups !</h1>
+        <h1>404</h1>
         <p>
-          Une erreur est survenue, veuillez réessayer plus tard ou vous diriger
-          vers un autre lien.
+          Page non trouvée
         </p>
+        <ButtonComeBack/>
       </main>
     </div>
   )
