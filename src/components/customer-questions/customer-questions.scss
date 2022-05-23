@@ -27,5 +27,8 @@
   &_paragraph {
     font-size: 1rem;
     margin-left: 11px;
+    &_bold {
+      font-weight: bold;
+    }
   }
 }

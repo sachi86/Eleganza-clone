@@ -1,4 +1,7 @@
 .container__customer__service {
+  display: flex;
+  flex-direction: column;
+  width: 10%;
   &__title {
     margin-bottom: 2vh;
   }

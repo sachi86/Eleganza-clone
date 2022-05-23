@@ -1,4 +1,7 @@
 .container__customer__contact {
+  display: flex;
+  flex-direction: column;
+  width: 15%;
   &__title {
     margin-bottom: 2vh;
   }
